@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav id="navbar">
+      <!-- Profile icon from Font Awesome -->
+       <!-- yaha pa varun user ka section aayga ya profile wala icon pa click karna pa aak side sa pallet khulaga jisma user ki details waga dasboard or jaha pa wo dakhaga ki accept huaa ya ni credit balance ya sab cheza aaygi, or aasa karna ki wo pellet khulaga phir option aayga option pa click karna pa aak usre html file khulagi waha usko dikhaga sab uska data jo bhi hoga matlab aasa karna sa toda clear rahaga idhar isi wala page ma agar show karinga to bahut mesh type ho jayga  -->
+  <div class="profile-icon">
+    <i class="fas fa-user-circle"></i>
+  </div>  
+      
+      <div class="logo">
+        <img src="logo.png" alt="logo">
+      </div>
+      <div id="search">
+        <svg viewBox="0 0 420 60" xmlns="http://www.w3.org/2000/svg">
+          <rect class="bar" />
+
+          <g class="magnifier">
+            <circle class="glass" />
+            <line class="handle" x1="32" y1="32" x2="44" y2="44"></line>
+          </g>
+
+          <g class="sparks">
+            <circle class="spark" />
+            <circle class="spark" />
+            <circle class="spark" />
+          </g>
+
+          <g class="burst pattern-one">
+            <circle class="particle circle" />
+            <path class="particle triangle" />
+            <circle class="particle circle" />
+            <path class="particle plus" />
+            <rect class="particle rect" />
+            <path class="particle triangle" />
+          </g>
+          <g class="burst pattern-two">
+            <path class="particle plus" />
+            <circle class="particle circle" />
+            <path class="particle triangle" />
+            <rect class="particle rect" />
+            <circle class="particle circle" />
+            <path class="particle plus" />
+          </g>
+          <g class="burst pattern-three">
+            <circle class="particle circle" />
+            <rect class="particle rect" />
+            <path class="particle plus" />
+            <path class="particle triangle" />
+            <rect class="particle rect" />
+            <path class="particle plus" />
+          </g>
+        </svg>
+        <input type=search name=q aria-label="Search for inspiration" />
+      </div>
+
+      <div id="results">
+
+      </div>
+
+
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <ul class="hide">
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="product-cat-nav">
+    <ul class="product-cat-list">
+      <li><a href="#electronics" class="active" onclick="showProductList('product-list1-electronics')"><i
+            class="fas fa-tv"></i>
+          Electronics</a></li>
+      <li><a href="#health" onclick="showProductList('product-list-Health-and-Wellness')"><i
+            class="fas fa-heartbeat"></i> Health and Wellness</a></li>
+      <li><a href="#fashion" onclick="showProductList('product-list-Fashion-and-Beauty')"><i class="fas fa-tshirt"></i>
+          Fashion and Beauty</a></li>
+      <li><a href="#home-kitchen" onclick="showProductList('product-list-Home-and-Kitchen')"><i
+            class="fas fa-blender"></i> Home and Kitchen</a></li>
+      <li><a href="#books" onclick="showProductList('product-list-Books-and-Stationery')"><i class="fas fa-book"></i>
+          Books and Stationery</a></li>
+      <li><a href="#automobiles" onclick="showProductList('product-list-Automobiles')"><i class="fas fa-car"></i>
+          Automobiles</a></li>
+    </ul>
+  </div>
+
+
+
+  <section id="home">
+    <h1>Welcome to Our Landing Page</h1>
+    <div class="product-list product-list1-electronics active">
+      <!-- Electronics products here -->
+      <div class="product-card">
+        <img
+          src="https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/m/u/5/-original-imahf3h3cgzg6mrc.jpeg?q=70"
+          alt="boAt Airdopes Alpha">
+        <div class="details">
+          <h3>boAt Airdopes Alpha with 35 HRS Playback, 13mm Drivers</h3>
+          <div class="rating">
+            <div class="stars">3.9 ★</div>
+            <span>(4,21,648)</span>
+          </div>
+          <div class="price">
+            <div class="current-price">₹899</div>
+            <div class="original-price">₹3,490</div>
+            <div class="discount">74% off</div>
+          </div>
+          <div class="footer">
+            Free delivery <br>
+            <a href="#">Save extra with combo offers</a>
+          </div>
+        </div>
+        <div class="review-container">
+          <div class="credit-points">1000 Credits</div>
+          <input type="text" id="review-text" class="review-text" placeholder="Write your review..." />
+          <button id="review-button" class="review-button">Write a Review</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/n/i/e/nb140-superstar-upto-55-hours-playtime-deep-bass-fast-charging-original-imah4j5fyftrqhvg.jpeg?q=70"
+          alt="Aroma NB140 Superstar" style="width: 180px;">
+        <div class="details">
+          <h3>Aroma NB140 Superstar Upto 55 Hours* Playtime Deep Bass</h3>
+          <p>Midnight Black, True Wireless</p>
+          <div class="rating">
+            <div class="stars">3.8 ★</div>
+            <span>(9,807)</span>
+          </div>
+          <div class="price">
+            <div class="current-price">₹480</div>
+            <div class="original-price">₹2,499</div>
+            <div class="discount">80% off</div>
+          </div>
+          <div class="footer">
+            <span style="color: #007bff;">Bank Offer</span>
+          </div>
+        </div>
+
+        <div class="review-container">
+          <div class="credit-points">500 Credits</div>
+          <input type="text" id="review-text" class="review-text" placeholder="Write your review..." />
+          <button id="review-button" class="review-button">Write a Review</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/mobile/u/i/y/-original-imah4zp7chcqfzwh.jpeg?q=70"
+          alt="Samsung Galaxy S24+">
+        <div class="details">
+          <h3>SAMSUNG Galaxy S24+ 5G (Cobalt Violet, 256 GB)</h3>
+          <p>12 GB RAM</p>
+          <div class="rating">
+            <div class="stars">4.5 ★</div>
+            <span>(3,232)</span>
+          </div>
+          <div class="price">
+            <div class="current-price">₹64,999</div>
+            <div class="original-price">₹99,999</div>
+            <div class="discount">35% off</div>
+          </div>
+          <div class="footer">
+            Upto <strong>₹36,050</strong> Off on Exchange
+          </div>
+        </div>
+        <div class="review-container">
+          <div class="credit-points">5000 Credits</div>
+          <input type="text" id="review-text" class="review-text" placeholder="Write your review..." />
+          <button id="review-button" class="review-button">Write a Review</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="https://rukminim2.flixcart.com/image/612/612/xif0q/mobile/j/b/2/phone-2a-plus-a142p-nothing-original-imah39xqpuzgsgcj.jpeg?q=70"
+          alt="Nothing Phone (2a) Plus">
+        <div class="details">
+          <h3>Nothing Phone (2a) Plus (Grey, 256 GB)</h3>
+          <p>8 GB RAM</p>
+          <div class="rating">
+            <div class="stars">4.4 ★</div>
+            <span>(6,267)</span>
+          </div>
+          <div class="price">
+            <div class="current-price">₹23,999</div>
+            <div class="original-price">₹29,999</div>
+            <div class="discount">20% off</div>
+          </div>
+          <div class="footer">
+            Free delivery <br>
+            <a href="#">Save extra with combo offers</a>
+          </div>
+        </div>
+        <div class="review-container">
+          <div class="credit-points">2500 Credits</div>
+          <input type="text" id="review-text" class="review-text" placeholder="Write your review..." />
+          <button id="review-button" class="review-button">Write a Review</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/u/n/j/fx506lhb-hn355w-fx506lh-hn258w-gaming-laptop-asus-original-imah2uwqwypuyy5k.jpeg?q=70"
+          alt="ASUS TUF Gaming F15">
+        <div class="details">
+          <h3>ASUS TUF Gaming F15 (Core i5 10th Gen, 8GB/512GB SSD)</h3>
+          <div class="rating">
+            <div class="stars">4.4 ★</div>
+            <span>(6,142)</span>
+          </div>
+          <div class="price">
+            <div class="current-price">₹47,990</div>
+            <div class="original-price">₹74,990</div>
+            <div class="discount">36% off</div>
+          </div>
+        </div>
+        <div class="review-container">
+          <div class="credit-points">2500 Credits</div>
+          <input type="text" id="review-text" class="review-text" placeholder="Write your review..." />
+          <button id="review-button" class="review-button">Write a Review</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="https://rukminim2.flixcart.com/image/612/612/xif0q/desktop-computer/d/h/u/1-d-i5-16-512gb-18-5-dzab-original-imah4ec5q36ye9zd.jpeg?q=70"
+          alt="DZAB Desktop">
+        <div class="details">
+          <h3>DZAB Intel Core i5 Desktop (16GB/512GB SSD, Windows 11)</h3>
+          <div class="rating">
+            <div class="stars">3.6 ★</div>
+            <span>(1,215)</span>
+          </div>
+          <div class="price">
+            <div class="current-price">₹10,749</div>
+            <div class="original-price">₹60,000</div>
+            <div class="discount">82% off</div>
+          </div>
+        </div>
+        <div class="review-container">
+          <div class="credit-points">2500 Credits</div>
+          <input type="text" id="review-text" class="review-text" placeholder="Write your review..." />
+          <button id="review-button" class="review-button">Write a Review</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/i/u/j/nu14u3inf56bn-sg-thin-and-light-laptop-ultimus-original-imagrtan4ttd2kgg.jpeg?q=70"
+          alt="Ultimus Elite Laptop">
+        <div class="details">
+          <h3>Ultimus Elite Intel Core i5 10th Gen (8GB/512GB SSD)</h3>
+          <div class="rating">
+            <div class="stars">3.7 ★</div>
+            <span>(456)</span>
+          </div>
+          <div class="price">
+            <div class="current-price">₹23,990</div>
+            <div class="original-price">₹45,990</div>
+            <div class="discount">47% off</div>
+          </div>
+        </div>
+        <div class="review-container">
+          <div class="credit-points">2500 Credits</div>
+          <input type="text" id="review-text" class="review-text" placeholder="Write your review..." />
+          <button id="review-button" class="review-button">Write a Review</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img
+          src=" https://rukminim2.flixcart.com/image/612/612/xif0q/allinone-desktop/f/s/1/22-dd2986in-hp-original-imah4d96dejyfyhh.jpeg?q=70"
+          alt="HP All-in-One 22-dd">
+        <div class="details">
+          <h3>HP All-in-One 22-dd Celeron Dual Core (8GB DDR4/500GB HDD)</h3>
+          <div class="rating">
+            <div class="stars">4.2 ★</div>
+            <span>(93)</span>
+          </div>
+          <div class="price">
+            <div class="current-price">₹35,990</div>
+            <div class="original-price">₹46,990</div>
+            <div class="discount">23% off</div>
+          </div>
+        </div>
+        <div class="review-container">
+          <div class="credit-points">2500 Credits</div>
+          <input type="text" id="review-text" class="review-text" placeholder="Write your review..." />
+          <button id="review-button" class="review-button">Write a Review</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="" alt="Comming Soon..">
+        <div class="details">
+          <h3>Comming Soon..</h3>
+          <p>Comming Soon..</p>
+          <div class="rating">
+            <div class="stars">Comming Soon.. ★</div>
+            <span>Comming Soon..</span>
+          </div>
+          <div class="price">
+            <div class="current-price">Comming Soon..999</div>
+            <div class="original-price">Comming Soon..</div>
+            <div class="discount">Comming Soon..</div>
+          </div>
+          <div class="footer">
+            Comming Soon.. <br>
+            <a href="#">Comming Soon..</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="" alt="Comming Soon..">
+        <div class="details">
+          <h3>Comming Soon..</h3>
+          <p>Comming Soon..</p>
+          <div class="rating">
+            <div class="stars">Comming Soon.. ★</div>
+            <span>Comming Soon..</span>
+          </div>
+          <div class="price">
+            <div class="current-price">Comming Soon..999</div>
+            <div class="original-price">Comming Soon..</div>
+            <div class="discount">Comming Soon..</div>
+          </div>
+          <div class="footer">
+            Comming Soon.. <br>
+            <a href="#">Comming Soon..</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="product-list product-list-Health-and-Wellness">
+      <!-- Health and Wellness products here -->
+      <div class="product-card">
+        <img
+          src="https://rukminim2.flixcart.com/image/612/612/xif0q/vitamin-supplement/0/g/h/60-liver-detox-effervescent-with-10-super-ayurvedic-herbs-original-imah6uy6yc4pgpba.jpeg?q=70"
+          alt="GREEN MOUNTAIN Vitamin E capsules">
+        <div class="details">
+          <h3>GREEN MOUNTAIN Vitamin E Capsules for Face</h3>
+          <div class="rating">
+            <div class="stars">4.2 ★</div>
+            <span>(1,667)</span>
+          </div>
+          <div class="price">
+            <div class="current-price">₹135</div>
+            <div class="original-price">₹899</div>
+            <div class="discount">84% off</div>
+          </div>
+        </div>
+        <div class="review-container">
+          <div class="credit-points">2500 Credits</div>
+          <input type="text" id="review-text" class="review-text" placeholder="Write your review..." />
+          <button id="review-button" class="review-button">Write a Review</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="https://rukminim2.flixcart.com/image/612/612/xif0q/vitamin-supplement/f/z/t/60-omega-3-fish-oil-1000-mg-with-180-mg-epa-and-120-mg-dha-omega-original-imagy4qepdchc5gh.jpeg?q=70"
+          alt="MUSCLEBLAZE Omega 3 Fish Oil">
+        <div class="details">
+          <h3>MUSCLEBLAZE Omega 3 Fish Oil 1000mg</h3>
+          <div class="rating">
+            <div class="stars">4.3 ★</div>
+            <span>(58,246)</span>
+          </div>
+          <div class="price">
+            <div class="current-price">₹429</div>
+            <div class="original-price">₹679</div>
+            <div class="discount">36% off</div>
+          </div>
+        </div>
+        <div class="review-container">
+          <div class="credit-points">2500 Credits</div>
+          <input type="text" id="review-text" class="review-text" placeholder="Write your review..." />
+          <button id="review-button" class="review-button">Write a Review</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="https://rukminim2.flixcart.com/image/612/612/xif0q/protein-supplement/m/a/l/creatine-micronised-creatine-monohydrate-lab-tested-enhanced-original-imah6g39ejah9xbs.jpeg?q=70"
+          alt="Wellcore Creatine" style="width: 250px;">
+        <div class="details">
+          <h3>Wellcore Micronised Creatine Monohydrate</h3>
+          <div class="rating">
+            <div class="stars">4.3 ★</div>
+            <span>(1,23,073)</span>
+          </div>
+          <div class="price">
+            <div class="current-price">₹1,079</div>
+            <div class="original-price">₹1,499</div>
+            <div class="discount">28% off</div>
+          </div>
+        </div>
+        <div class="review-container">
+          <div class="credit-points">2500 Credits</div>
+          <input type="text" id="review-text" class="review-text" placeholder="Write your review..." />
+          <button id="review-button" class="review-button">Write a Review</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="" alt="Comming Soon..">
+        <div class="details">
+          <h3>Comming Soon..</h3>
+          <p>Comming Soon..</p>
+          <div class="rating">
+            <div class="stars">Comming Soon.. ★</div>
+            <span>Comming Soon..</span>
+          </div>
+          <div class="price">
+            <div class="current-price">Comming Soon..999</div>
+            <div class="original-price">Comming Soon..</div>
+            <div class="discount">Comming Soon..</div>
+          </div>
+          <div class="footer">
+            Comming Soon.. <br>
+            <a href="#">Comming Soon..</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="product-list product-list-Fashion-and-Beauty">
+      <!-- Fashion and Beauty products here -->
+
+      <!-- Card 1 -->
+      <div class="product-card">
+        <img
+          src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/t/n/0/m-chgrey8-men-planet-original-imah46seqyhqg2rw.jpeg?q=70"
+          alt="MENPLANET Shirt">
+        <div class="details">
+          <h3>MENPLANET Men Comfort Fit Checked Shirt</h3>
+          <div class="price">
+            <div class="current-price">₹259</div>
+            <div class="original-price">₹999</div>
+            <div class="discount">74% off</div>
+          </div>
+        </div>
+        <div class="review-container">
+          <div class="credit-points">2500 Credits</div>
+          <input type="text" id="review-text" class="review-text" placeholder="Write your review..." />
+          <button id="review-button" class="review-button">Write a Review</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="product-card">
+        <img
+          src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/o/d/a/s-dpwhite-woxen-original-imah3mg8zhcyukms.jpeg?q=70"
+          alt="Woxen Shirt">
+        <div class="details">
+          <h3>WOXEN Men Regular Fit Solid Shirt</h3>
+          <div class="price">
+            <div class="current-price">₹369</div>
+            <div class="original-price">₹2,099</div>
+            <div class="discount">82% off</div>
+          </div>
+        </div>
+        <div class="review-container">
+          <div class="credit-points">2500 Credits</div>
+          <input type="text" id="review-text" class="review-text" placeholder="Write your review..." />
+          <button id="review-button" class="review-button">Write a Review</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="" alt="Comming Soon..">
+        <div class="details">
+          <h3>Comming Soon..</h3>
+          <p>Comming Soon..</p>
+          <div class="rating">
+            <div class="stars">Comming Soon.. ★</div>
+            <span>Comming Soon..</span>
+          </div>
+          <div class="price">
+            <div class="current-price">Comming Soon..999</div>
+            <div class="original-price">Comming Soon..</div>
+            <div class="discount">Comming Soon..</div>
+          </div>
+          <div class="footer">
+            Comming Soon.. <br>
+            <a href="#">Comming Soon..</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="product-list product-list-Home-and-Kitchen">
+      <!-- Home and Kitchen products here -->
+      <div class="product-card">
+        <img src="" alt="Comming Soon..">
+        <div class="details">
+          <h3>Comming Soon..</h3>
+          <p>Comming Soon..</p>
+          <div class="rating">
+            <div class="stars">Comming Soon.. ★</div>
+            <span>Comming Soon..</span>
+          </div>
+          <div class="price">
+            <div class="current-price">Comming Soon..999</div>
+            <div class="original-price">Comming Soon..</div>
+            <div class="discount">Comming Soon..</div>
+          </div>
+          <div class="footer">
+            Comming Soon.. <br>
+            <a href="#">Comming Soon..</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="product-list product-list-Books-and-Stationery">
+      <!-- Books and Stationery products here -->
+    </div>
+
+
+    <div class="product-list product-list-Automobiles">
+      <!-- Automobiles products here -->
+    </div>
+  </section>
+
+
+
+
+
+  <section id="about">
+    <h1>About Us</h1>
+  </section>
+  <section id="services">
+    <h1>Our Services</h1>
+  </section>
+  <section id="contact">
+    <h1>Contact Us</h1>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>About Us</h3>
+            <p>We are a company dedicated to providing the best products and services to our customers. Our mission is to deliver quality and value in everything we do.</p>
+        </div>
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: info@example.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: 123 Main Street, Anytown, USA</p>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
